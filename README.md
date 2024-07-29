@@ -7,16 +7,22 @@ This is a comprehensive dataset containing RGBlimp trajectory data, which includ
 The dataset includes 140 trajectory data points.
 - The index ranges from 0 to 34, and each index contains four trajectory data files.
 - The mapping from index to data names is `index * 4 + 1` to `index * 4 + 4`.
-
+### Data Files
+All dataset files are stored in the `data` directory. This includes:
+- `data/data_1.csv`: (rdx, Fl, Fr)=(0, 1.7, 5.4)
+- `data/data_2.csv`: (rdx, Fl, Fr)=(0, 1.7, 5.4)
+- ...
+- `data/data_4.csv`: (rdx, Fl, Fr)=(-1, 2.05, 2.05)
+- 
 ### Input
 The relationship between index and input is illustrated in the table below.
-| rdx  | (1.4,5.8) | (1.6,5.5) |**&#9474;**| (1.2,6.1) | (1.7,6.1) | (1.2,5.4) | (1.7,5.4) | (2.05,2.05) | rdx  |
+| rdx \[cm\]  | (1.4,5.8) \[gf\] | (1.6,5.5) \[gf\] |**&#9474;**| (1.2,6.1) \[gf\] | (1.7,6.1) \[gf\] | (1.2,5.4) \[gf\] | (1.7,5.4) \[gf\] | (2.05,2.05) \[gf\] | rdx \[cm\]  |
 |------|-----------|-----------|---|-----------|-----------|-----------|-----------|-------------|------|
 | 0    | 25        | 20        | **&#9474;** |15        | 10        | 5         | 0         | 30          | 0    |
-| 0.01 | 26        | 21        | **&#9474;** |16        | 11        | 6         | 1         | 31          | 0.01 |
-| 0.02 | 27        | 22        | **&#9474;** |17        | 12        | 7         | 2         | 32          | 0.02 |
-| 0.03 | 28        | 23        | **&#9474;** |18        | 13        | 8         | 3         | 33          | 0.03 |
-| 0.04 | 29        | 24        | **&#9474;** |19        | 14        | 9         | 4         | 34          | -0.01 |
+| 1 | 26        | 21        | **&#9474;** |16        | 11        | 6         | 1         | 31          | 1 |
+| 2 | 27        | 22        | **&#9474;** |17        | 12        | 7         | 2         | 32          | 2 |
+| 3 | 28        | 23        | **&#9474;** |18        | 13        | 8         | 3         | 33          | 3 |
+| 4 | 29        | 24        | **&#9474;** |19        | 14        | 9         | 4         | 34          | -1 |
 
 ## Data Fields
 ### position_data
