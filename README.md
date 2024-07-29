@@ -13,7 +13,7 @@ All dataset files are stored in the `data` directory. This includes:
 - `data/data_2.csv`: (rdx, Fl, Fr)=(0, 1.7, 5.4)
 - ...
 - `data/data_4.csv`: (rdx, Fl, Fr)=(-1, 2.05, 2.05)
-- 
+
 ### Input
 The relationship between index and input is illustrated in the table below.
 | rdx \[cm\]  | (1.4,5.8) \[gf\] | (1.6,5.5) \[gf\] |**&#9474;**| (1.2,6.1) \[gf\] | (1.7,6.1) \[gf\] | (1.2,5.4) \[gf\] | (1.7,5.4) \[gf\] | (2.05,2.05) \[gf\] | rdx \[cm\]  |
