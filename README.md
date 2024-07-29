@@ -10,13 +10,74 @@ The dataset includes 140 trajectory data points.
 
 ### Input
 The relationship between index and input is illustrated in the table below.
-| rdx  | (1.4,5.8) | (1.6,5.5) | (1.2,6.1) | (1.7,6.1) | (1.2,5.4) | (1.7,5.4) | (2.05,2.05) | rdx  |
-|------|-----------|-----------|-----------|-----------|-----------|-----------|-------------|------|
-| 0    | 25        | 20        | 15        | 10        | 5         | 0         | 30          | 0    |
-| 0.01 | 26        | 21        | 16        | 11        | 6         | 1         | 31          | 0.01 |
-| 0.02 | 27        | 22        | 17        | 12        | 7         | 2         | 32          | 0.02 |
-| 0.03 | 28        | 23        | 18        | 13        | 8         | 3         | 33          | 0.03 |
-| 0.04 | 29        | 24        | 19        | 14        | 9         | 4         | 34          | -0.01 |
+<table>
+  <tr>
+    <th>rdx</th>
+    <th>(1.4,5.8)</th>
+    <th>(1.6,5.5)</th>
+    <th>(1.2,6.1)</th>
+    <th>(1.7,6.1)</th>
+    <th>(1.2,5.4)</th>
+    <th>(1.7,5.4)</th>
+    <th>(2.05,2.05)</th>
+    <th>rdx</th>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td style="background-color: lightblue;">25</td>
+    <td style="background-color: lightblue;">20</td>
+    <td style="background-color: lightblue;">15</td>
+    <td style="background-color: lightgreen;">10</td>
+    <td style="background-color: lightgreen;">5</td>
+    <td style="background-color: lightgreen;">0</td>
+    <td>30</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>0.01</td>
+    <td style="background-color: lightblue;">26</td>
+    <td style="background-color: lightblue;">21</td>
+    <td style="background-color: lightblue;">16</td>
+    <td style="background-color: lightgreen;">11</td>
+    <td style="background-color: lightgreen;">6</td>
+    <td style="background-color: lightgreen;">1</td>
+    <td>31</td>
+    <td>0.01</td>
+  </tr>
+  <tr>
+    <td>0.02</td>
+    <td style="background-color: lightblue;">27</td>
+    <td style="background-color: lightblue;">22</td>
+    <td style="background-color: lightblue;">17</td>
+    <td style="background-color: lightgreen;">12</td>
+    <td style="background-color: lightgreen;">7</td>
+    <td style="background-color: lightgreen;">2</td>
+    <td>32</td>
+    <td>0.02</td>
+  </tr>
+  <tr>
+    <td>0.03</td>
+    <td style="background-color: lightblue;">28</td>
+    <td style="background-color: lightblue;">23</td>
+    <td style="background-color: lightblue;">18</td>
+    <td style="background-color: lightgreen;">13</td>
+    <td style="background-color: lightgreen;">8</td>
+    <td style="background-color: lightgreen;">3</td>
+    <td>33</td>
+    <td>0.03</td>
+  </tr>
+  <tr>
+    <td>0.04</td>
+    <td style="background-color: lightblue;">29</td>
+    <td style="background-color: lightblue;">24</td>
+    <td style="background-color: lightblue;">19</td>
+    <td style="background-color: lightgreen;">14</td>
+    <td style="background-color: lightgreen;">9</td>
+    <td style="background-color: lightgreen;">4</td>
+    <td>34</td>
+    <td>-0.01</td>
+  </tr>
+</table>
 ## Data Fields
 ### position_data
 - `p_1`: X-axis position coordinate (unit: meters)
