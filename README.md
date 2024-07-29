@@ -10,7 +10,13 @@ The dataset includes 140 trajectory data points.
 
 ### Input
 The relationship between index and input is illustrated in the table below.
-
+| rdx  | (1.4,5.8) | (1.6,5.5) | (1.2,6.1) | (1.7,6.1) | (1.2,5.4) | (1.7,5.4) | (2.05,2.05) | rdx  |
+|------|-----------|-----------|-----------|-----------|-----------|-----------|-------------|------|
+| 0    | 25        | 20        | 15        | 10        | 5         | 0         | 30          | 0    |
+| 0.01 | 26        | 21        | 16        | 11        | 6         | 1         | 31          | 0.01 |
+| 0.02 | 27        | 22        | 17        | 12        | 7         | 2         | 32          | 0.02 |
+| 0.03 | 28        | 23        | 18        | 13        | 8         | 3         | 33          | 0.03 |
+| 0.04 | 29        | 24        | 19        | 14        | 9         | 4         | 34          | -0.01 |
 ## Data Fields
 ### position_data
 - `p_1`: X-axis position coordinate (unit: meters)
