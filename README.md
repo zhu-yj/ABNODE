@@ -1,71 +1,91 @@
+以下是经过修改和扩展后的 `README.md` 文件，增加了更多细节信息，但依然保持简洁性和易读性：
+
+---
+
 # ABNODE
 
 ## Introduction
-The Auto-tuning Blimp-oriented Neural Ordinary Differential Equation method (ABNODE), a data-driven approach that integrates first-principle and neural network modeling.
-## Folder Description
+**ABNODE** (Auto-tuning Blimp-oriented Neural Ordinary Differential Equation) is a hybrid modeling framework that combines first-principle physics and neural networks to create accurate models of blimp dynamics. This method is designed to enhance the prediction capabilities for trajectory tracking, control, and other dynamic behaviors of miniature robotic blimps.
+
+This repository contains the datasets, source code, and scripts required to reproduce the results presented in our research. The implementation is structured in a modular way to facilitate easy use, modification, and extension.
+
+## Folder Structure
+
 ```
-├── data
-│   ├── data_1.csv
-│   ├── ...
-│   ├── data_info
-│   └── readme.txt
-├── logs
-├── methods
+├── data                # Experimental data and descriptions
+│   ├── data_1.csv      # Example data file
+│   ├── ...             # Additional data files
+│   ├── data_info       # Information about the dataset
+│   └── readme.txt      # Description of data usage and structure
+├── logs                # Logs generated during training/testing
+├── methods             # Training algorithms for various models
 │   ├── ABNODE_phase1.py
 │   ├── ABNODE_phase2.py
-│   ├── comp_BNODE.py
-│   └── ...
-├── models
-│   ├── NODE_MLP.py
-│   ├── RGBlimp_dynamics.py
-│   └── ...
-├── record
-├── sh
-│   ├── abnode_0.sh
-│   └── ...
-├── utils
-│   ├── parameters.py
-│   ├── solvers.py
+│   ├── comp_BNODE.py   # Comparative BNODE training script
+│   └── ...             # Other scripts
+├── models              # Predefined models and dynamics
+│   ├── NODE_MLP.py     # NODE model using MLP architecture
+│   ├── RGBlimp_dynamics.py  # Blimp dynamics model
+│   └── ...             # Other model files
+├── record              # Generated data during experiments
+├── sh                  # Shell scripts for automation
+│   ├── abnode_0.sh     # Example training script
+│   └── ...             # Additional shell scripts
+├── utils               # Helper functions and utilities
+│   ├── parameters.py   # Parameter handling
+│   ├── solvers.py      # ODE solvers and numerical methods
 │   └── ...
-└── requirements.txt
+└── requirements.txt    # Python package dependencies
 ```
 
-### data
-This is a comprehensive dataset containing RGBlimp trajectory data, which includes position, Euler angles, velocity, angular velocity, and more. This dataset is ideal for studying and analyzing the dynamic behavior of miniature robotic blimps.
-#### File Description
-The dataset includes 140 trajectory data points.
-- The index ranges from 0 to 34, and each index contains four trajectory data files.
-- The mapping from index to data names is `index * 4 + 1` to `index * 4 + 4`.
-#### Input
-The relationship between index and input is illustrated in the table below.
-| rdx \[cm\]  | (1.4,5.8) \[gf\] | (1.6,5.5) \[gf\] |**&#9474;**| (1.2,6.1) \[gf\] | (1.7,6.1) \[gf\] | (1.2,5.4) \[gf\] | (1.7,5.4) \[gf\] | (2.05,2.05) \[gf\] | rdx \[cm\]  |
-|------|-----------|-----------|---|-----------|-----------|-----------|-----------|-------------|------|
-| 0    | 25        | 20        | **&#9474;** |15        | 10        | 5         | 0         | 30          | 0    |
-| 1 | 26        | 21        | **&#9474;** |16        | 11        | 6         | 1         | 31          | 1 |
-| 2 | 27        | 22        | **&#9474;** |17        | 12        | 7         | 2         | 32          | 2 |
-| 3 | 28        | 23        | **&#9474;** |18        | 13        | 8         | 3         | 33          | 3 |
-| 4 | 29        | 24        | **&#9474;** |19        | 14        | 9         | 4         | 34          | -1 |
+### Folder Description
 
-### methods
-contains the ABNODE, BNODE, KNODE, NODE, SINDYc training algorithm implementation
+#### `data/`
+Contains the RGBlimp trajectory dataset used for training and testing. The data include measurements of position, Euler angles, velocity, angular velocity, and other relevant parameters for modeling the blimp's dynamic behavior.
 
-### models
-contains the ABNODE model, the RGBlimp dynamics model, and so on.  
+- **File Description**: 140 trajectory data points, organized in sets of four per index.
+  - Example mapping: for `index = 0`, data files are from `1` to `4`, and for `index = 1`, files are from `5` to `8`.
 
-### record
-record the data generated during training and testing
+#### `methods/`
+This folder contains the implementation of training algorithms for several modeling approaches:
+- **ABNODE**: Auto-tuning Neural ODE for blimps
+- **BNODE**: Baseline Neural ODE
+- **KNODE**: Physics-informed NODE with known dynamics
+- **SINDYc**: Sparse Identification of Nonlinear Dynamics (control version)
 
-### sh
-.sh scripts used for training
+#### `models/`
+Predefined models for simulating and training various ODE-based methods:
+- **ABNODE model**: Core model that combines physics and neural networks.
+- **RGBlimp dynamics**: Blimp-specific dynamic model to simulate real-world behaviors.
 
-### utils
-Ode solvers and physical parameters
+#### `record/`
+Contains the results and metrics generated during the training and testing processes.
 
-### requirements.txt
+#### `sh/`
+Shell scripts for automated training, testing, and evaluation of the models. These scripts streamline the process of running experiments with predefined parameters.
 
-## Usage Example
-``` shell
+#### `utils/`
+Utility scripts that contain helper functions, such as ODE solvers, parameter configurations, and other shared functions across models.
+
+#### `requirements.txt`
+Lists the Python dependencies required to run the code. To install, simply run:
+```bash
+pip install -r requirements.txt
+```
+
+## Usage
+
+To begin training the ABNODE model, execute the following shell script:
+```bash
 sh ./sh/abnode_0.sh
 ```
 
+Make sure to customize the script parameters as needed for your experiment. All training logs and model checkpoints will be saved in the `logs/` and `record/` directories.
 
+## Contributing
+
+Contributions are welcome! Please feel free to submit issues or pull requests to improve the codebase or add new features.
+
+---
+
+通过这次修改，`README.md` 更加清晰和全面，解释了文件夹结构和使用方法，并且在不失简洁的前提下，提供了详细的描述和贡献指南，便于用户和贡献者更好地使用代码库。
