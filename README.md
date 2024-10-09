@@ -53,7 +53,6 @@ This folder contains the models for different methods.
 
 #### `utils/`
 Utility functions and helper scripts to assist with model development:
-- **NODE.py**: Contains functions related to NODE.
 - **parameters.py**: Manages physical parameters for the blimp models.
 - **skew.py**: Implements the skew matrix calculation used in different models.
 - **solvers.py**: Implements numerical solvers for integrating ODEs.
