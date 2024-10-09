@@ -62,6 +62,9 @@ Contains the list of dependencies and their versions. To install the required pa
 ```bash
 pip install -r requirements.txt
 ```
+#### other information
+Operating System: Ubuntu 22.04 LTS 
+Python Version: 3.10.12
 
 ## Usage
 To start training the ABNODE model, simply run the corresponding shell script:
@@ -69,5 +72,4 @@ To start training the ABNODE model, simply run the corresponding shell script:
 sh ./sh/abnode_0.sh
 ```
 Logs and results will be saved in the `logs/` and `record/` folders, respectively.
-
 
