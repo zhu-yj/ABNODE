@@ -18,15 +18,15 @@ The repository is modularly structured, allowing users to easily navigate the co
 │   ├── ABNODE_phase1.py # ABNODE training script (Phase 1)
 │   ├── ABNODE_phase2.py # ABNODE training script (Phase 2)
 │   ├── comp_BNODE.py   # Comparative BNODE training script
-│   └── ...             # Other training scripts
+│   └── ...            
 ├── models              # Neural ODE and dynamics model implementations
 │   ├── NODE_MLP.py     # NODE model using MLP architecture
 │   ├── RGBlimp_dynamics.py  # Blimp dynamics model
-│   └── ...             # Other model files
+│   └── ...            
 ├── record              # Generated data during experiments
 ├── sh                  # Shell scripts for automation
 │   ├── abnode_0.sh     # Example training script
-│   └── ...             # Additional shell scripts
+│   └── ...             
 ├── utils               # Helper functions and utilities
 │   ├── parameters.py   # Physical parameters configuration
 │   ├── solvers.py      # ODE solvers and numerical methods
@@ -43,10 +43,7 @@ This folder contains trajectory data for the RGBlimp, which includes various mea
 This folder contains the Python scripts used to implement and train various models:
 - **ABNODE_phase1.py**: Implements Phase 1 of the ABNODE model training.
 - **ABNODE_phase2.py**: Implements Phase 2 of the ABNODE model training.
-- **comp_BNODE.py**: Script for training and comparing the BNODE model.
-- **comp_KNODE.py**: Script for training the KNODE model.
-- **comp_NODE.py**: Script for training the NODE model.
-- **comp_SINDYc.py**: Script for training the SINDYc model, which is used for sparse identification of dynamics.
+- **comp_XXX.py**: Script for training and comparing the XXX model (BNODE, KNODE, NODE, SINDYc).
 
 #### `models/`
 This folder contains the models for different methods.
