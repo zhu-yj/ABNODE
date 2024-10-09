@@ -75,3 +75,5 @@ sh ./sh/abnode_0.sh
 ```
 Logs and results will be saved in the `logs/` and `record/` folders, respectively.
 
+## Citaion
+If you find any part of this repository useful and/or use it in your research, please cite the following publication.
