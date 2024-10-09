@@ -8,6 +8,7 @@ The repository is modularly structured, allowing users to easily navigate the co
 ## Folder Structure
 
 ```
+.
 ├── data                # Neural ODE and dynamics model implementations
 │   ├── data_1.csv      # data_1 file
 │   ├── ...             # data files
