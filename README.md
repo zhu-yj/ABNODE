@@ -63,7 +63,7 @@ Contains the list of dependencies and their versions. To install the required pa
 pip install -r requirements.txt
 ```
 #### other information
-Operating System: Ubuntu 22.04 LTS 
+Operating System: Ubuntu 22.04 LTS \\
 Python Version: 3.10.12
 
 ## Usage
