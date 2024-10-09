@@ -1,7 +1,3 @@
-以下是经过修改和扩展后的 `README.md` 文件，增加了更多细节信息，但依然保持简洁性和易读性：
-
----
-
 # ABNODE
 
 ## Introduction
@@ -82,10 +78,3 @@ sh ./sh/abnode_0.sh
 
 Make sure to customize the script parameters as needed for your experiment. All training logs and model checkpoints will be saved in the `logs/` and `record/` directories.
 
-## Contributing
-
-Contributions are welcome! Please feel free to submit issues or pull requests to improve the codebase or add new features.
-
----
-
-通过这次修改，`README.md` 更加清晰和全面，解释了文件夹结构和使用方法，并且在不失简洁的前提下，提供了详细的描述和贡献指南，便于用户和贡献者更好地使用代码库。
