@@ -1,20 +1,69 @@
 # RGBlimp Trajectory Dataset
 
 ## Introduction
-This is a comprehensive dataset containing RGBlimp trajectory data, which includes position, Euler angles, velocity, angular velocity, and more. This dataset is ideal for studying and analyzing the dynamic behavior of miniature robotic blimps.
+## Folder Description
+.
+├── data
+│   ├── data_1.csv
+│   ├── ...
+│   ├── data_139.csv
+│   ├── data_140.csv
+│   ├── data_info
+│   │   ├── data_info_spiral.csv
+│   │   └── data_info_straight.csv
+│   └── readme.txt
+├── logs
+├── methods
+│   ├── __init__.py
+│   ├── ABNODE_phase1.py
+│   ├── ABNODE_phase2.py
+│   ├── comp_BNODE.py
+│   ├── comp_KNODE.py
+│   ├── comp_NODE.py
+│   └── comp_SINDYc.py
+├── models
+│   ├── __init__.py
+│   ├── NODE_MLP.py
+│   ├── RGBlimp_dynamics_ABNODE_p1.py
+│   ├── RGBlimp_dynamics_ABNODE_p2.py
+│   ├── RGBlimp_dynamics_KNODE.py
+│   └── RGBlimp_dynamics.py
+├── record
+│   ├── abnode
+│   ├── bnode
+│   ├── knode
+│   ├── node
+│   ├── rgblimp
+│   └── sindyc
+├── sh
+│   ├── abnode_0.sh
+│   ├── bnode_0.sh
+│   ├── knode_0.sh
+│   ├── node_0.sh
+│   └── sindy_0.sh
+├── utils
+│   ├── __init__.py
+│   ├── NODE.py
+│   ├── parameters.py
+│   ├── print_package_version.py
+│   ├── skew.py
+│   └── solvers.py
+└── requirements.txt
 
-## File Description
+### ./data/
+This is a comprehensive dataset containing RGBlimp trajectory data, which includes position, Euler angles, velocity, angular velocity, and more. This dataset is ideal for studying and analyzing the dynamic behavior of miniature robotic blimps.
+#### File Description
 The dataset includes 140 trajectory data points.
 - The index ranges from 0 to 34, and each index contains four trajectory data files.
 - The mapping from index to data names is `index * 4 + 1` to `index * 4 + 4`.
-### Data Files
+#### Data Files
 All dataset files are stored in the `data` directory. This includes:
 - `data/data_1.csv`: (rdx, Fl, Fr)=(0, 1.7, 5.4)
 - `data/data_2.csv`: (rdx, Fl, Fr)=(0, 1.7, 5.4)
 - ...
 - `data/data_4.csv`: (rdx, Fl, Fr)=(-1, 2.05, 2.05)
 
-### Input
+#### Input
 The relationship between index and input is illustrated in the table below.
 | rdx \[cm\]  | (1.4,5.8) \[gf\] | (1.6,5.5) \[gf\] |**&#9474;**| (1.2,6.1) \[gf\] | (1.7,6.1) \[gf\] | (1.2,5.4) \[gf\] | (1.7,5.4) \[gf\] | (2.05,2.05) \[gf\] | rdx \[cm\]  |
 |------|-----------|-----------|---|-----------|-----------|-----------|-----------|-------------|------|
@@ -24,28 +73,29 @@ The relationship between index and input is illustrated in the table below.
 | 3 | 28        | 23        | **&#9474;** |18        | 13        | 8         | 3         | 33          | 3 |
 | 4 | 29        | 24        | **&#9474;** |19        | 14        | 9         | 4         | 34          | -1 |
 
-## Data Fields
-### position_data
+#### Data Fields
+##### position_data
 - `p_1`: X-axis position coordinate (unit: meters)
 - `p_2`: Y-axis position coordinate (unit: meters)
 - `p_3`: Z-axis position coordinate (unit: meters)
 
-### euler_angle
+##### euler_angle
 - `e_1`: Roll angle (unit: degrees)
 - `e_2`: Pitch angle (unit: degrees)
 - `e_3`: Yaw angle (unit: degrees)
 
-### velocity_data
+##### velocity_data
 - `vb_1`: Velocity in the X direction in body frame (unit: meters/second)
 - `vb_2`: Velocity in the Y direction in body frame (unit: meters/second)
 - `vb_3`: Velocity in the Z direction in body frame (unit: meters/second)
 
-### angular_velocity
+##### angular_velocity
 - `wb_1`: Angular velocity in the X direction in body frame (unit: rad/s)
 - `wb_2`: Angular velocity in the Y direction in body frame (unit: rad/s)
 - `wb_3`: Angular velocity in the Z direction in body frame (unit: rad/s)
+other data field, see the files for details
 
-## Usage Example
+#### Usage Example
 Below is a simple Python example demonstrating how to load and use the data:
 
 ```python
@@ -55,3 +105,15 @@ import pandas as pd
 trajectory_data = pd.read_csv('data_1.csv')
 print("Trajectory Data Preview:")
 print(trajectory_data.head())
+
+### ./methods/
+contains the ABNODE, BNODE, KNODE, NODE, SINDYc training algorithm implementation
+### ./models/
+contains the ABNODE model, the RGBlimp dynamics model, and so on.  
+### ./record/
+record the data generated during training and testing
+### ./sh/
+.sh scripts used for training
+### ./utils/
+Ode solvers and physical parameters
+### requirements.txt
