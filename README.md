@@ -1,6 +1,7 @@
 # RGBlimp Trajectory Dataset
 
 ## Introduction
+The Auto-tuning Blimp-oriented Neural Ordinary Differential Equation method (ABNODE), a data-driven approach that integrates first-principle and neural network modeling.
 ## Folder Description
 ```
 ├── data
@@ -85,6 +86,7 @@ trajectory_data = pd.read_csv('data_1.csv')
 print("Trajectory Data Preview:")
 print(trajectory_data.head())
 ```
+
 ### ./methods/
 contains the ABNODE, BNODE, KNODE, NODE, SINDYc training algorithm implementation
 ### ./models/
@@ -96,3 +98,9 @@ record the data generated during training and testing
 ### ./utils/
 Ode solvers and physical parameters
 ### requirements.txt
+## Usage Example
+``` shell
+sh ./sh/abnode_0.sh
+```
+
+
