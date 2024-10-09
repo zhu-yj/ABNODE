@@ -2,7 +2,7 @@
 
 ## Introduction
 ## Folder Description
-.
+```
 ├── data
 │   ├── data_1.csv
 │   ├── ...
@@ -49,6 +49,7 @@
 │   ├── skew.py
 │   └── solvers.py
 └── requirements.txt
+```
 
 ### ./data/
 This is a comprehensive dataset containing RGBlimp trajectory data, which includes position, Euler angles, velocity, angular velocity, and more. This dataset is ideal for studying and analyzing the dynamic behavior of miniature robotic blimps.
@@ -105,7 +106,7 @@ import pandas as pd
 trajectory_data = pd.read_csv('data_1.csv')
 print("Trajectory Data Preview:")
 print(trajectory_data.head())
-
+```
 ### ./methods/
 contains the ABNODE, BNODE, KNODE, NODE, SINDYc training algorithm implementation
 ### ./models/
