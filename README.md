@@ -48,10 +48,8 @@ This folder contains the Python scripts used to implement and train various mode
 #### `models/`
 This folder contains the models for different methods.
 - **NODE_MLP.py**: Neural ODE with a Multilayer Perceptron (MLP) architecture.
-- **RGBlimp_dynamics_ABNODE_p1.py**: The dynamic model for RGBlimp used in Phase 1 of ABNODE.
-- **RGBlimp_dynamics_ABNODE_p2.py**: The dynamic model used in Phase 2 of ABNODE.
-- **RGBlimp_dynamics_KNODE.py**: The dynamics model used in the KNODE approach.
 - **RGBlimp_dynamics.py**: The core dynamics model for the RGBlimp, common across several methods.
+- **RGBlimp_dynamics_XXX.py**: The dynamics model used in XXX models.
 
 #### `utils/`
 Utility functions and helper scripts to assist with model development:
