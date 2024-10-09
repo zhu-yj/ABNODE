@@ -1,9 +1,13 @@
+在基于你提供的文件结构基础上，进一步扩展和完善 `README.md` 文件，保持简洁但增强对各个文件和目录的解释。以下是更新后的版本：
+
+---
+
 # ABNODE
 
 ## Introduction
-**ABNODE** (Auto-tuning Blimp-oriented Neural Ordinary Differential Equation) is a hybrid modeling framework that combines first-principle physics and neural networks to create accurate models of blimp dynamics. This method is designed to enhance the prediction capabilities for trajectory tracking, control, and other dynamic behaviors of miniature robotic blimps.
+**ABNODE** (Auto-tuning Blimp-oriented Neural Ordinary Differential Equation) is a hybrid modeling framework that integrates first-principle physical modeling with neural networks for accurately capturing the dynamic behavior of robotic blimps. This repository provides all the necessary data, code, and scripts to train and test ABNODE as well as comparative models like BNODE, KNODE, and SINDYc.
 
-This repository contains the datasets, source code, and scripts required to reproduce the results presented in our research. The implementation is structured in a modular way to facilitate easy use, modification, and extension.
+The repository is modularly structured, allowing users to easily navigate the components, run experiments, and extend the models.
 
 ## Folder Structure
 
@@ -34,47 +38,74 @@ This repository contains the datasets, source code, and scripts required to repr
 └── requirements.txt    # Python package dependencies
 ```
 
-### Folder Description
+### Folder Descriptions
 
 #### `data/`
-Contains the RGBlimp trajectory dataset used for training and testing. The data include measurements of position, Euler angles, velocity, angular velocity, and other relevant parameters for modeling the blimp's dynamic behavior.
+This folder contains trajectory data for the RGBlimp, which includes various measurements such as position, Euler angles, velocity, and angular velocity. It is divided into multiple CSV files, with each file representing different trajectory points.
 
-- **File Description**: 140 trajectory data points, organized in sets of four per index.
-  - Example mapping: for `index = 0`, data files are from `1` to `4`, and for `index = 1`, files are from `5` to `8`.
+- **data_info_spiral.csv**: Metadata for spiral trajectories.
+- **data_info_straight.csv**: Metadata for straight-line trajectories.
+- **readme.txt**: Additional documentation explaining the structure and content of the dataset.
+
+#### `logs/`
+This folder stores the logs generated during model training and testing. Each log captures important information about the training process, such as loss curves, model checkpoints, and hyperparameters used.
 
 #### `methods/`
-This folder contains the implementation of training algorithms for several modeling approaches:
-- **ABNODE**: Auto-tuning Neural ODE for blimps
-- **BNODE**: Baseline Neural ODE
-- **KNODE**: Physics-informed NODE with known dynamics
-- **SINDYc**: Sparse Identification of Nonlinear Dynamics (control version)
+This folder contains the Python scripts used to implement and train various models:
+- **ABNODE_phase1.py**: Implements Phase 1 of the ABNODE model training.
+- **ABNODE_phase2.py**: Implements Phase 2 of ABNODE, focusing on fine-tuning and further optimizations.
+- **comp_BNODE.py**: Script for training and comparing the BNODE model.
+- **comp_KNODE.py**: Script for training the physics-informed KNODE.
+- **comp_NODE.py**: Vanilla NODE model training script.
+- **comp_SINDYc.py**: Script for training the SINDYc model, which is used for sparse identification of dynamics.
 
 #### `models/`
-Predefined models for simulating and training various ODE-based methods:
-- **ABNODE model**: Core model that combines physics and neural networks.
-- **RGBlimp dynamics**: Blimp-specific dynamic model to simulate real-world behaviors.
+This folder contains the actual model implementations:
+- **NODE_MLP.py**: Neural ODE with a Multilayer Perceptron (MLP) architecture.
+- **RGBlimp_dynamics_ABNODE_p1.py**: The dynamic model for RGBlimp used in Phase 1 of ABNODE.
+- **RGBlimp_dynamics_ABNODE_p2.py**: The dynamic model used in Phase 2 of ABNODE.
+- **RGBlimp_dynamics_KNODE.py**: The dynamics model used in the KNODE approach.
+- **RGBlimp_dynamics.py**: The core dynamics model for the RGBlimp, common across several methods.
 
 #### `record/`
-Contains the results and metrics generated during the training and testing processes.
+Stores the results generated during training and testing:
+- Each subdirectory (e.g., `abnode`, `bnode`, `knode`, etc.) corresponds to records from specific model experiments.
 
 #### `sh/`
-Shell scripts for automated training, testing, and evaluation of the models. These scripts streamline the process of running experiments with predefined parameters.
+Shell scripts to automate the training and evaluation of the models. Each script is tailored to a specific model:
+- **abnode_0.sh**: Runs the ABNODE training pipeline.
+- **bnode_0.sh**: Runs the BNODE comparison model.
+- **knode_0.sh**: Runs the KNODE model.
+- **node_0.sh**: Runs the vanilla NODE model.
+- **sindy_0.sh**: Runs the SINDYc model.
 
 #### `utils/`
-Utility scripts that contain helper functions, such as ODE solvers, parameter configurations, and other shared functions across models.
+Utility functions and helper scripts to assist with model development:
+- **NODE.py**: Contains helper functions related to NODE.
+- **parameters.py**: Manages physical parameters for the blimp models.
+- **print_package_version.py**: Prints the versions of the installed packages.
+- **skew.py**: Implements the skew matrix calculation used in certain ODE solvers.
+- **solvers.py**: Implements numerical solvers for integrating ODEs.
 
 #### `requirements.txt`
-Lists the Python dependencies required to run the code. To install, simply run:
+Contains the list of dependencies and their versions. To install the required packages, run:
 ```bash
 pip install -r requirements.txt
 ```
 
 ## Usage
 
-To begin training the ABNODE model, execute the following shell script:
+To start training the ABNODE model, simply run the corresponding shell script:
 ```bash
 sh ./sh/abnode_0.sh
 ```
 
-Make sure to customize the script parameters as needed for your experiment. All training logs and model checkpoints will be saved in the `logs/` and `record/` directories.
+Logs and results will be saved in the `logs/` and `record/` folders, respectively.
 
+## Contributing
+
+We welcome contributions! If you find any issues or have ideas for improvements, feel free to submit a pull request or open an issue.
+
+---
+
+这样调整后，`README.md` 更详细地解释了项目结构中每个文件夹和文件的功能，使用户可以更容易理解代码库内容，配置环境并运行实验。
