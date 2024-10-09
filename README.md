@@ -6,48 +6,26 @@
 ├── data
 │   ├── data_1.csv
 │   ├── ...
-│   ├── data_139.csv
-│   ├── data_140.csv
 │   ├── data_info
-│   │   ├── data_info_spiral.csv
-│   │   └── data_info_straight.csv
 │   └── readme.txt
 ├── logs
 ├── methods
-│   ├── __init__.py
 │   ├── ABNODE_phase1.py
 │   ├── ABNODE_phase2.py
 │   ├── comp_BNODE.py
-│   ├── comp_KNODE.py
-│   ├── comp_NODE.py
-│   └── comp_SINDYc.py
+│   └── ...
 ├── models
-│   ├── __init__.py
 │   ├── NODE_MLP.py
-│   ├── RGBlimp_dynamics_ABNODE_p1.py
-│   ├── RGBlimp_dynamics_ABNODE_p2.py
-│   ├── RGBlimp_dynamics_KNODE.py
-│   └── RGBlimp_dynamics.py
+│   ├── RGBlimp_dynamics.py
+│   └── ...
 ├── record
-│   ├── abnode
-│   ├── bnode
-│   ├── knode
-│   ├── node
-│   ├── rgblimp
-│   └── sindyc
 ├── sh
 │   ├── abnode_0.sh
-│   ├── bnode_0.sh
-│   ├── knode_0.sh
-│   ├── node_0.sh
-│   └── sindy_0.sh
+│   └── ...
 ├── utils
-│   ├── __init__.py
-│   ├── NODE.py
 │   ├── parameters.py
-│   ├── print_package_version.py
-│   ├── skew.py
-│   └── solvers.py
+│   ├── solvers.py
+│   └── ...
 └── requirements.txt
 ```
 
