@@ -1,7 +1,7 @@
 # ABNODE
 
 ## Introduction
-**ABNODE** (Auto-tuning Blimp-oriented Neural Ordinary Differential Equation) is a hybrid modeling framework that integrates first-principle physical modeling with neural networks for accurately capturing the dynamic behavior of robotic blimps. This repository provides all the necessary data, code, and scripts to train and test ABNODE as well as comparative models like BNODE, KNODE, and SINDYc.
+**ABNODE** (Auto-tuning Blimp-oriented Neural Ordinary Differential Equation) is a hybrid modeling framework that integrates first-principle physical modeling with neural networks for accurately capturing the dynamic behavior of miniature robotic blimps. This repository provides all the necessary data, code, and scripts to train and test ABNODE as well as comparative models like BNODE, KNODE, and SINDYc.
 
 The repository is modularly structured, allowing users to easily navigate the components, run experiments, and extend the models.
 
