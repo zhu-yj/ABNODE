@@ -83,7 +83,7 @@ Utility functions and scripts to assist with model development:
 
 This project uses several Python packages listed in `requirements.txt`. To ensure compatibility and avoid conflicts, it's recommended to set up a virtual environment before installing dependencies.
 
-To create a virtual environment and install the required packages, run the following commands:
+To install the required packages, run the following commands:
 
 ```bash
 # Install dependencies from requirements.txt
