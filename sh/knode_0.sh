@@ -1,0 +1,1 @@
+python ./methods/comp_KNODE.py --index=0 

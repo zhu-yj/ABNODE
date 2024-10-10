@@ -1,0 +1,1 @@
+python ./methods/comp_NODE.py --index=0 
