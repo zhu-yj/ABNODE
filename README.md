@@ -76,12 +76,12 @@ Utility functions and scripts to assist with model development:
 - **skew.py**: Implements the skew matrix calculation used in different models.
 - **solvers.py**: Implements numerical solvers for integrating ODEs.
 
-#### `requirements.txt`
-Contains the list of dependencies and their versions. To install the required packages, run:
+#### other information
+`requirements.txt` contains the list of dependencies and their versions. To install the required packages, run:
 ```bash
 pip install -r requirements.txt
 ```
-#### other information
+
 Operating System: Ubuntu 22.04 LTS
 
 Python Version: 3.10.12
