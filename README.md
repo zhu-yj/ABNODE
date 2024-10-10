@@ -40,7 +40,7 @@ The repository is modularly structured, allowing users to easily navigate the co
 #### `data/`
 This is a comprehensive dataset containing RGBlimp trajectory data, which includes position, Euler angles, velocity, angular velocity, and more. This dataset is ideal for studying and analyzing the dynamic behavior of miniature robotic blimps.
 
-The dataset consists of 140 data files corresponding to different trajectories. Here's a detailed explanation:
+The dataset consists of **140** data files corresponding to different trajectories. Here's a detailed explanation:
 - The indices range from 0 to 34, with each index associated with four specific trajectory data files.
 - The data file names are mapped from each index using the formula: `index * 4 + 1` to `index * 4 + 4`.
 
