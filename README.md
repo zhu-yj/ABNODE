@@ -6,7 +6,7 @@
 The repository is modularly structured, allowing users to easily navigate the components, run experiments, and extend the models.
 
 ## Visual Overview
-![ABNODE Architecture](figures/first_photo_6.pdf)
+![ABNODE Architecture](figures/first_photo_6.png)
 
 ## Folder Structure
 
