@@ -76,13 +76,17 @@ Utility functions and scripts to assist with model development:
 - **skew.py**: Implements the skew matrix calculation used in different models.
 - **solvers.py**: Implements numerical solvers for integrating ODEs.
 
-#### other information
-Operating System: Ubuntu 22.04 LTS
+## Environment Setup
 
-Python Version: 3.10.12
+- **Operating System**: Ubuntu 22.04 LTS (other Linux distributions may also work)
+- **Python Version**: 3.10.12 (compatibility with other Python versions has not been tested)
 
-`requirements.txt` contains the list of dependencies and their versions. To install the required packages, run:
+This project uses several Python packages listed in `requirements.txt`. To ensure compatibility and avoid conflicts, it's recommended to set up a virtual environment before installing dependencies.
+
+To create a virtual environment and install the required packages, run the following commands:
+
 ```bash
+# Install dependencies from requirements.txt
 pip install -r requirements.txt
 ```
 
