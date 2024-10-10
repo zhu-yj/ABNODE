@@ -5,7 +5,7 @@
 [![Last Commit](https://img.shields.io/github/last-commit/zhu-yj/ABNODE.svg)](https://github.com/zhu-yj/ABNODE/commits/main)
 
 ## Introduction
-**ABNODE** (Auto-tuning Blimp-oriented Neural Ordinary Differential Equation) is a hybrid modeling framework that integrates first-principle model with neural networks to accurately capture the dynamics of miniature robotic blimps. This repository provides all the necessary data, code, and scripts to train and test ABNODE, as well as comparative models including NODE, BNODE, KNODE, and SINDYc.
+**ABNODE** (Auto-tuning Blimp-oriented Neural Ordinary Differential Equation) is a data-driven dynamics modeling framework that combines first-principle models with neural networks to accurately capture the dynamics of miniature robotic blimps. This repository provides all the necessary data, code, and scripts to train and test ABNODE, as well as comparative models including NODE, BNODE, KNODE, and SINDYc.
 
 The repository is modularly structured, allowing users to easily navigate the components, run experiments, and extend the models.
 
@@ -16,7 +16,7 @@ The repository is modularly structured, allowing users to easily navigate the co
 
 ```
 .
-├── data                # Neural ODE and dynamics model implementations
+├── data                # Trajectory data and related information
 │   ├── data_1.csv      # data_1 file
 │   ├── ...             # data files
 │   ├── data_info       # Information about the dataset
@@ -29,7 +29,7 @@ The repository is modularly structured, allowing users to easily navigate the co
 │   └── ...            
 ├── models              # Neural ODE and dynamics model implementations
 │   ├── NODE_MLP.py     # NODE model using MLP architecture
-│   ├── RGBlimp_dynamics.py  # Blimp dynamics model
+│   ├── RGBlimp_dynamics.py  # RGBlimp dynamics model
 │   └── ...            
 ├── record              # Generated data during experiments
 ├── sh                  # Shell scripts for automation
@@ -45,7 +45,7 @@ The repository is modularly structured, allowing users to easily navigate the co
 ### Folder Descriptions
 
 #### `data/`
-This is a comprehensive dataset containing RGBlimp trajectory data, which includes position, Euler angles, velocity, angular velocity, and more. This dataset is ideal for studying and analyzing the dynamic behavior of miniature robotic blimps.
+This is a comprehensive dataset containing RGBlimp trajectory data, featuring information such as position, Euler angles, velocity, and angular velocity, which is ideal for studying and analyzing the dynamic behavior of miniature robotic blimps.
 
 The dataset consists of **140** data files corresponding to different trajectories. Here's a detailed explanation:
 - The indices range from 0 to 34, with each index associated with four specific trajectory data files.
@@ -63,7 +63,7 @@ The table below illustrates the correspondence between indices and inputs:
 For instance, the input configuration `(rdx, Fl, Fr) = (1.7 gf, 5.4 gf, 0 cm)` corresponds to `index = 0`, which is associated with the data files named `data_1.csv` through `data_4.csv`.
 
 #### `methods/`
-This folder contains the Python scripts used to implement and train various models:
+This folder contains the Python scripts used to implement and train models:
 - **ABNODE_phase1.py**: Implements Phase 1 of the ABNODE model training.
 - **ABNODE_phase2.py**: Implements Phase 2 of the ABNODE model training.
 - **comp_XXX.py**: Script for training and comparing the XXX model (BNODE, KNODE, NODE, SINDYc).
@@ -102,7 +102,7 @@ sh ./sh/abnode_0.sh
 Logs and results will be saved in the `logs/` and `record/` folders, respectively.
 
 ## Citaion
-If you find any part of this repository useful and/or use it in your research, please cite the following publication.
+If you find this repository helpful for your research or use it in any form, please consider citing our publication:
 ``` latex
 @misc{zhu2024datadrivendynamicsmodelingminiature,
       title={Data-Driven Dynamics Modeling of Miniature Robotic Blimps Using Neural ODEs With Parameter Auto-Tuning}, 
@@ -114,3 +114,4 @@ If you find any part of this repository useful and/or use it in your research, p
       url={https://arxiv.org/abs/2404.18580}, 
 }
 ```
+For more details, please visit the [arXiv page](https://arxiv.org/abs/2404.18580).
