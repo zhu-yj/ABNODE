@@ -5,7 +5,7 @@
 [![Last Commit](https://img.shields.io/github/last-commit/zhu-yj/ABNODE.svg)](https://github.com/zhu-yj/ABNODE/commits/main)
 
 ## Introduction
-**ABNODE** (Auto-tuning Blimp-oriented Neural Ordinary Differential Equation) is a data-driven dynamics modeling framework that combines first-principle models with neural networks to accurately capture the dynamics of miniature robotic blimps. This repository provides all the necessary data, code, and scripts to train and test ABNODE, as well as comparative models including NODE, BNODE, KNODE, and SINDYc.
+**ABNODE** (Auto-tuning Blimp-oriented Neural Ordinary Differential Equation) is a data-driven dynamics modeling approach that integrates first-principle models and neural networks to accurately capture the dynamics of miniature robotic blimps. This repository provides all the necessary data, code, and scripts to train and test ABNODE, as well as comparative models including NODE, BNODE, KNODE, and SINDYc.
 
 The repository is modularly structured, allowing users to easily navigate the components, run experiments, and extend the models.
 
