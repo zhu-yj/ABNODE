@@ -53,7 +53,7 @@ The table below illustrates the correspondence between indices and inputs:
 | 3 | 28        | 23        | **&#9474;** |18        | 13        | 8         | 3         | 33          | 3 |
 | 4 | 29        | 24        | **&#9474;** |19        | 14        | 9         | 4         | 34          | -1 |
 
-For instance, the input combination `(rdx, Fl, Fr) = (1.7 gf, 5.4 gf, 0 cm)` corresponds to `index = 0`, which is associated with the data files named `data_1.csv` through `data_4.csv`.
+For instance, the input configuration `(rdx, Fl, Fr) = (1.7 gf, 5.4 gf, 0 cm)` corresponds to `index = 0`, which is associated with the data files named `data_1.csv` through `data_4.csv`.
 
 #### `methods/`
 This folder contains the Python scripts used to implement and train various models:
@@ -68,8 +68,8 @@ This folder contains the models for different methods.
 - **RGBlimp_dynamics_XXX.py**: The dynamics model used in XXX models.
 
 #### `utils/`
-Utility functions and helper scripts to assist with model development:
-- **parameters.py**: Manages physical parameters for the blimp models.
+Utility functions and scripts to assist with model development:
+- **parameters.py**: Manages physical parameters for the RGBlimp model.
 - **skew.py**: Implements the skew matrix calculation used in different models.
 - **solvers.py**: Implements numerical solvers for integrating ODEs.
 
@@ -92,3 +92,14 @@ Logs and results will be saved in the `logs/` and `record/` folders, respectivel
 
 ## Citaion
 If you find any part of this repository useful and/or use it in your research, please cite the following publication.
+``` latex
+@misc{zhu2024datadrivendynamicsmodelingminiature,
+      title={Data-Driven Dynamics Modeling of Miniature Robotic Blimps Using Neural ODEs With Parameter Auto-Tuning}, 
+      author={Yongjian Zhu and Hao Cheng and Feitian Zhang},
+      year={2024},
+      eprint={2404.18580},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2404.18580}, 
+}
+```
