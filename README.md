@@ -1,7 +1,7 @@
 # ABNODE
 
 ## Introduction
-**ABNODE** (Auto-tuning Blimp-oriented Neural Ordinary Differential Equation) is a hybrid modeling framework that integrates first-principle physical modeling with neural networks for accurately capturing the dynamic behavior of miniature robotic blimps. This repository provides all the necessary data, code, and scripts to train and test ABNODE as well as comparative models like BNODE, KNODE, and SINDYc.
+**ABNODE** (Auto-tuning Blimp-oriented Neural Ordinary Differential Equation) is a hybrid modeling framework that integrates first-principle model with neural networks to accurately capture the dynamics of miniature robotic blimps. This repository provides all the necessary data, code, and scripts to train and test ABNODE, as well as comparative models including NODE, BNODE, KNODE, and SINDYc.
 
 The repository is modularly structured, allowing users to easily navigate the components, run experiments, and extend the models.
 
@@ -38,7 +38,20 @@ The repository is modularly structured, allowing users to easily navigate the co
 ### Folder Descriptions
 
 #### `data/`
-This folder contains trajectory data for the RGBlimp, which includes various measurements such as position, Euler angles, velocity, and angular velocity.
+This is a comprehensive dataset containing RGBlimp trajectory data, which includes position, Euler angles, velocity, angular velocity, and more. This dataset is ideal for studying and analyzing the dynamic behavior of miniature robotic blimps.
+
+The dataset includes 140 trajectory data points.
+- The index ranges from 0 to 34, and each index contains four trajectory data files.
+- The mapping from index to data names is `index * 4 + 1` to `index * 4 + 4`.
+
+The relationship between index and input is illustrated in the table below.
+| rdx \[cm\]  | (1.4,5.8) \[gf\] | (1.6,5.5) \[gf\] |**&#9474;**| (1.2,6.1) \[gf\] | (1.7,6.1) \[gf\] | (1.2,5.4) \[gf\] | (1.7,5.4) \[gf\] | (2.05,2.05) \[gf\] | rdx \[cm\]  |
+|------|-----------|-----------|---|-----------|-----------|-----------|-----------|-------------|------|
+| 0    | 25        | 20        | **&#9474;** |15        | 10        | 5         | 0         | 30          | 0    |
+| 1 | 26        | 21        | **&#9474;** |16        | 11        | 6         | 1         | 31          | 1 |
+| 2 | 27        | 22        | **&#9474;** |17        | 12        | 7         | 2         | 32          | 2 |
+| 3 | 28        | 23        | **&#9474;** |18        | 13        | 8         | 3         | 33          | 3 |
+| 4 | 29        | 24        | **&#9474;** |19        | 14        | 9         | 4         | 34          | -1 |
 
 #### `methods/`
 This folder contains the Python scripts used to implement and train various models:
