@@ -1,4 +1,5 @@
 # ABNODE
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/zhu-yj/ABNODE/blob/main/LICENSE)
 
 ## Introduction
 **ABNODE** (Auto-tuning Blimp-oriented Neural Ordinary Differential Equation) is a hybrid modeling framework that integrates first-principle model with neural networks to accurately capture the dynamics of miniature robotic blimps. This repository provides all the necessary data, code, and scripts to train and test ABNODE, as well as comparative models including NODE, BNODE, KNODE, and SINDYc.
