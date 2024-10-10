@@ -77,14 +77,14 @@ Utility functions and scripts to assist with model development:
 - **solvers.py**: Implements numerical solvers for integrating ODEs.
 
 #### other information
+Operating System: Ubuntu 22.04 LTS
+
+Python Version: 3.10.12
+
 `requirements.txt` contains the list of dependencies and their versions. To install the required packages, run:
 ```bash
 pip install -r requirements.txt
 ```
-
-Operating System: Ubuntu 22.04 LTS
-
-Python Version: 3.10.12
 
 ## Usage
 To start training the ABNODE model, simply run the corresponding shell script:
