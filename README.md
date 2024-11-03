@@ -112,7 +112,6 @@ If you find this repository helpful for your research or use it in any form, ple
   volume={9},
   number={12},
   pages={10986-10993},
-  keywords={Aerodynamics;Robots;Mathematical models;Neural networks;Accuracy;Vehicle dynamics;Nonlinear dynamical systems;Vectors;Quadrotors;Force;Dynamics;calibration and identification;machine learning for robot control},
   doi={10.1109/LRA.2024.3484182}}
 ```
 For more details, please visit the [page](https://ieeexplore.ieee.org/document/10723763).
