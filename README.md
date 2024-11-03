@@ -104,14 +104,15 @@ Logs and results will be saved in the `logs/` and `record/` folders, respectivel
 ## Citaion
 If you find this repository helpful for your research or use it in any form, please consider citing our publication:
 ``` latex
-@misc{zhu2024datadrivendynamicsmodelingminiature,
-      title={Data-Driven Dynamics Modeling of Miniature Robotic Blimps Using Neural ODEs With Parameter Auto-Tuning}, 
-      author={Yongjian Zhu and Hao Cheng and Feitian Zhang},
-      year={2024},
-      eprint={2404.18580},
-      archivePrefix={arXiv},
-      primaryClass={cs.RO},
-      url={https://arxiv.org/abs/2404.18580}, 
-}
+@ARTICLE{10723763,
+  author={Zhu, Yongjian and Cheng, Hao and Zhang, Feitian},
+  journal={IEEE Robotics and Automation Letters}, 
+  title={Data-Driven Dynamics Modeling of Miniature Robotic Blimps Using Neural ODEs With Parameter Auto-Tuning}, 
+  year={2024},
+  volume={9},
+  number={12},
+  pages={10986-10993},
+  keywords={Aerodynamics;Robots;Mathematical models;Neural networks;Accuracy;Vehicle dynamics;Nonlinear dynamical systems;Vectors;Quadrotors;Force;Dynamics;calibration and identification;machine learning for robot control},
+  doi={10.1109/LRA.2024.3484182}}
 ```
-For more details, please visit the [arXiv page](https://arxiv.org/abs/2404.18580).
+For more details, please visit the [page](https://ieeexplore.ieee.org/document/10723763).
